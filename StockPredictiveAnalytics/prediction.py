@@ -9,8 +9,14 @@ x = tf.placeholder(tf.float64)
 
 linear = x ** (a) + 2 * x + b
 
-
 sess = tf.Session()
-init = tf.global_variables_initializer()
-sess.run(init)
-print(sess.run(linear, {x: [1, 2, 3, 4]}))
+x = [[-2.25 + 4.75j], [-3.25 + 5.75j]]
+absolute = tf.abs(x)
+print(sess.run(absolute))
+
+a = tf.constant(5.0)
+b = tf.constant(4.0)
+
+z = tf.Session()
+c = a*b
+print(z.run(c))
